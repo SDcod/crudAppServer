@@ -4,7 +4,7 @@ const mysql = require("mysql2");
 const bodyParser = require("body-parser");
 
 const app = express();
-
+const PORT = 3003;
 const db = mysql.createPool({
   host: "localhost",
   user: "root",
@@ -66,6 +66,6 @@ app.put("/api/update/:id", (req, res) => {
   });
 });
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("app running on port 5000");
 });
