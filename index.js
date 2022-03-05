@@ -66,6 +66,6 @@ app.put("/api/update/:id", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log("app running on port 5000");
+app.listen(process.env.PORT || PORT, () => {
+  console.log(`app running on port ${PORT}`);
 });
